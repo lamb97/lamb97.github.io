@@ -15,12 +15,12 @@ Education
 
 Work experience
 ======
-* Apr.2023\-Oct.2022: group leader \& vice captain
+* Apr.2023\-Oct.2022: vision group member
   * RoboMaster team
   * Duties included: Develop and debug auto-aiming technology
   * Supervisor: Li Huijun
   
-* Nov.2023\-now: vision group leader
+* Nov.2023\-now: vision group member
   * RoboMaster team
   * Duties included: 
     * Write technical documentation

@@ -15,17 +15,17 @@ Education
 
 Work experience
 ======
-* Apr.2023\-Oct.2022: vision group member
+* Apr.2023\-now: vision group member
   * RoboMaster team
-  * Duties included: Develop and debug auto-aiming technology
-  * Supervisor: Li Huijun
-  
-* Nov.2023\-now: vision group member
-  * RoboMaster team
-  * Duties included: 
+  * Duties included:
+    * Visual recognition and attitude solving of the target  
+    * Develop and debug auto-aiming technology
     * Write technical documentation
     * Develop motion planning for robotic arms
   * Supervisor: Li Huijun
+  
+* Inconming: bridgedp intern
+  
   
 Skills
 ======

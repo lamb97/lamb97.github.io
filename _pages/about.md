@@ -27,5 +27,7 @@ Now I am the member of CUBOT vision group. I have strong English reading and wri
 3. Assorted
    - SLAM, non-linear optimization, point cloud registration
    - planning, trajectory generation, decision making
+  
+   - <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=8mkwzNRaw8eyXKmBRWrYISgVjS_H11FGi3CKDjf6GXA&cl=ffffff&w=a"></script>
 
 

@@ -3,8 +3,8 @@ main:
   - title: "Projects"
     url: /publications/  
         
-  - title: "Blogs"
-    url: /year-archive/
+  # - title: "Blogs"
+  #   url: /year-archive/
     
   - title: "CV"
     url: /cv/

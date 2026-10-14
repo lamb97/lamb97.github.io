@@ -1,3 +1,19 @@
+:root {
+  --bg-color: #f6f2eb;
+  --text-color: #2b2519;
+  --link-color: #1772d0;
+  --link-hover-color: #c45f42;
+  --toggle-border-color: #2b2519;
+}
+
+[data-theme="dark"] {
+  --bg-color: #181c1b;
+  --text-color: #dde8e6;
+  --link-color: #78b7f2;
+  --link-hover-color: #f0a36f;
+  --toggle-border-color: #dde8e6;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
@@ -64,14 +80,57 @@
 }
 
 a {
-  color: #1772d0;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: var(--link-hover-color);
   text-decoration: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+td,
+th,
+tr,
+p,
+h2,
+h3,
+strong {
+  color: var(--text-color);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  background: var(--bg-color);
+  border: 3px double var(--toggle-border-color);
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  opacity: 1;
 }
 
 body,
@@ -116,13 +175,13 @@ h2 {
 .previously summary {
   width: fit-content;
   cursor: pointer;
-  color: #1772d0;
+  color: var(--link-color);
   list-style: none;
 }
 
 .previously summary:hover,
 .previously summary:focus-visible {
-  color: #f09228;
+  color: var(--link-hover-color);
 }
 
 .previously summary::-webkit-details-marker {
@@ -181,4 +240,8 @@ span.highlight {
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+}
+
+.colored-box h3 {
+  color: black;
 }

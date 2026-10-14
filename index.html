@@ -9,10 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <script>
+      (function () {
+        var savedTheme = localStorage.getItem('theme');
+        var preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme || preferredTheme);
+      })();
+    </script>
   </head>
 
   <body>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">&#9790;</button>
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
@@ -274,5 +281,26 @@ for Signal Temporal Logic Tasks</span>
         </td>
       </tr>
     </table>
+    <script>
+      (function () {
+        var toggle = document.getElementById('theme-toggle');
+
+        function updateToggle(theme) {
+          var isDark = theme === 'dark';
+          toggle.textContent = isDark ? '\u2600' : '\u263E';
+          toggle.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+          toggle.setAttribute('aria-pressed', String(isDark));
+        }
+
+        updateToggle(document.documentElement.getAttribute('data-theme'));
+        toggle.addEventListener('click', function () {
+          var currentTheme = document.documentElement.getAttribute('data-theme');
+          var nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', nextTheme);
+          localStorage.setItem('theme', nextTheme);
+          updateToggle(nextTheme);
+        });
+      })();
+    </script>
   </body>
 </html>

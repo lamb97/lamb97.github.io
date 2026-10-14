@@ -109,6 +109,48 @@ h2 {
   font-size: 32px;
 }
 
+.previously {
+  margin: 1em 0;
+}
+
+.previously summary {
+  width: fit-content;
+  cursor: pointer;
+  color: #1772d0;
+  list-style: none;
+}
+
+.previously summary:hover,
+.previously summary:focus-visible {
+  color: #f09228;
+}
+
+.previously summary::-webkit-details-marker {
+  display: none;
+}
+
+.previously summary::before {
+  content: '';
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  margin: 0 0.6em 0 0.1em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  vertical-align: 0.1em;
+  transform: rotate(-45deg);
+  transition: transform 220ms ease;
+}
+
+.previously[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.previously .disclosure-panel > p {
+  margin: 0;
+  padding-top: 0.35em;
+}
+
 .one {
   width: 160px;
   height: 160px;
